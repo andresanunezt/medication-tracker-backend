@@ -6,7 +6,7 @@ class CreateMedications < ActiveRecord::Migration[6.1]
       t.string :brand_name
       t.string :medication_dose
       t.string :medication_description
-      t.date :last_taken
+      t.datetime :last_taken
       t.belongs_to :user, null: false, foreign_key: true
 
       t.timestamps
