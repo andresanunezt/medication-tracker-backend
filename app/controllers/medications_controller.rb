@@ -16,8 +16,11 @@ class MedicationsController < ApplicationController
   # POST /medications
   def create
     @medication = Medication.new(medication_params)
-
+    # @medication.last_taken = @medication.last_taken.strftime("Last Taken on %m/%d/%Y %H:%I %p")
+    # # binding.pry
     if @medication.save
+       
+      # binding.pry
       render json: @medication, status: :created, location: @medication
     else
       render json: @medication.errors, status: :unprocessable_entity
@@ -46,6 +49,6 @@ class MedicationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def medication_params
-      params.require(:medication).permit(:name, :direction, :directions, :brand_name, :dose, :description, :user_id)
+      params.require(:medication).permit(:name, :direction, :directions, :brand_name, :medication_dose, :medication_description,  :last_taken)
     end
 end

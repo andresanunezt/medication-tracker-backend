@@ -17,8 +17,8 @@ Medication.destroy_all
     User.create(
         name: "Person", 
         username: Faker::Artist.name, 
-        email: "email"   
-        password: password 
+        email: "email", 
+        password: "password"
     )
 
 
@@ -28,8 +28,19 @@ Medication.destroy_all
         brand_name: "Effexor",
         medication_dose: "75 mg",
         medication_description: "peach round-shaped tablet imprinted with TV in the front and 4 K on the back",
-        last_taken: "",
-        user: User.all.sample,
+        last_taken: "2000-01-01 00:00:25",
+       
+                
+    )
+
+    Medication.create(
+        name: "Alprazolam", 
+        directions: "take 1 tablet by mouth once a day",
+        brand_name: "Xanax",
+        medication_dose: "0.5 mg",
+        medication_description: "peach oval-shaped tablet imprinted with 1 9 in the front and a Y on the back",
+        last_taken: "2000-01-01 00:00:25",
+       
                 
     )
 
