@@ -16,11 +16,11 @@ class MedicationsController < ApplicationController
   # POST /medications
   def create
     @medication = Medication.new(medication_params)
-    # @medication.last_taken = @medication.last_taken.strftime("Last Taken on %m/%d/%Y %H:%I %p")
-    # # binding.pry
+
+  
     if @medication.save
-       
-      # binding.pry
+    @medication.last_taken = @medication.last_taken.strftime("%m/%d/%Y %H:%I %p")
+      
       render json: @medication, status: :created, location: @medication
     else
       render json: @medication.errors, status: :unprocessable_entity
