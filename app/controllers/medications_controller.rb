@@ -19,7 +19,7 @@ class MedicationsController < ApplicationController
 
   
     if @medication.save
-    @medication.last_taken = @medication.last_taken.strftime("%m/%d/%Y %H:%I %p")
+    # @medication.last_taken = @medication.last_taken.strftime("%m/%d/%Y %H:%I %p")
       
       render json: @medication, status: :created, location: @medication
     else
