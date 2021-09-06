@@ -23,9 +23,9 @@ Medication.destroy_all
 
 
     Medication.create(
-        name: "MEDICATION I", 
-        directions: "take 1 tablet by mouth twice a day",
-        brand_name: "sample brand name",
+        name: "Medication I", 
+        directions: "Take 1 tablet by mouth twice a day",
+        brand_name: "Sample Brand Name",
         medication_dose: "75 mg",
         medication_description: "peach round-shaped tablet imprinted with TV in the front and 4 K on the back",
         last_taken: "2000-01-01 00:00:25",
@@ -34,9 +34,9 @@ Medication.destroy_all
     )
 
     Medication.create(
-        name: "MEDICATION II", 
+        name: "Medication II", 
         directions: "take 1 tablet by mouth once a day",
-        brand_name: "sample brand name",
+        brand_name: "Sample Brand Name",
         medication_dose: "0.5 mg",
         medication_description: "peach oval-shaped tablet imprinted with 1 9 in the front and a Y on the back",
         last_taken: "2000-01-01 00:00:25",
